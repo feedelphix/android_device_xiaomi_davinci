@@ -78,6 +78,10 @@ on post-fs-data
 on boot
     start rmt_storage
     start rfs_access
+    
+    # Smart Charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
 
     # Set thermal mode to evaluation
     chown system system /sys/class/thermal/thermal_message/sconfig
