@@ -305,6 +305,9 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Product characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
